@@ -1,0 +1,7 @@
+data,produto,categoria,estoque_atual,vendas_dia,preco_unitario,estoque_minimo,demanda_prevista
+2025-11-01,Arroz 5kg,Alimentos,120,30,23.90,50,32
+2025-11-01,Feijão 1kg,Alimentos,80,18,8.50,30,20
+2025-11-01,Detergente,Limpeza,200,25,3.20,60,27
+2025-11-02,Arroz 5kg,Alimentos,90,28,23.90,50,30
+2025-11-02,Feijão 1kg,Alimentos,62,16,8.50,30,18
+2025-11-02,Detergente,Limpeza,175,22,3.20,60,24
