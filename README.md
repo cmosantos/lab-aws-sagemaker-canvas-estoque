@@ -1,47 +1,131 @@
-# 📊 Previsão de Estoque Inteligente na AWS com [SageMaker Canvas](https://aws.amazon.com/pt/sagemaker/canvas/)
+# 🧠📊 Previsão de Estoque Inteligente na AWS com SageMaker Canvas  
+**Bootcamp DIO + AWS – Machine Learning No-Code**
 
-Bem-vindo ao desafio de projeto "Previsão de Estoque Inteligente na AWS com SageMaker Canvas. Neste Lab DIO, você aprenderá a usar o SageMaker Canvas para criar previsões de estoque baseadas em Machine Learning (ML). Siga os passos abaixo para completar o desafio!
+Este repositório contém minha solução para o desafio **“Previsão de Estoque Inteligente com AWS SageMaker Canvas”**, utilizando Machine Learning **no-code** para prever demanda de estoque e apoiar decisões estratégicas de negócio.
 
-## 📋 Pré-requisitos
+O projeto foi construído com base no repositório oficial:  
+➡️ `digitalinnovationone/lab-aws-sagemaker-canvas-estoque`  
 
-Antes de começar, certifique-se de ter uma conta na AWS. Se precisar de ajuda para criar sua conta, confira nosso repositório [AWS Cloud Quickstart](https://github.com/digitalinnovationone/aws-cloud-quickstart).
+---
+
+# 🌟 Visão Geral do Projeto
+
+O objetivo deste lab é demonstrar como o **Amazon SageMaker Canvas** permite criar, treinar e analisar modelos de Machine Learning **sem escrever código**, utilizando datasets reais e processos totalmente guiados.
+
+Este repositório documenta:
+
+- A estrutura do projeto  
+- Os datasets utilizados  
+- O processo completo dentro do Canvas  
+- Prints e evidências das etapas  
+- Insights obtidos a partir das previsões  
+- Conclusões finais  
+
+---
+
+# 📂 Estrutura do Repositório
+
+lab-aws-sagemaker-canvas-estoque/
+├── datasets/
+│ ├── dataset-500-curso-sagemaker-canvas-dio.csv
+│ ├── dataset-1000-com-preco-promocional-e-renovacao.csv
+│ ├── dataset-1000-com-preco-variavel-e-renovacao.csv
+│ └── estoque_supermercado.csv
+│
+├── docs/
+│ ├── guia-uso-canvas.md
+│ └── evidencias/
+│ ├── 01-upload-dataset.png
+│ ├── 02-config-modelo.png
+│ ├── 03-treinamento.png
+│ ├── 04-metricas.png
+│ └── 05-previsoes.png
+│
+└── README.md
 
 
-## 🎯 Objetivos Deste Desafio de Projeto (Lab)
+As imagens são **evidências do processo**, simuladas aqui como placeholders profissionais, podendo ser substituídas depois pelos prints reais do Canvas.
 
-![image](https://github.com/digitalinnovationone/lab-aws-sagemaker-canvas-estoque/assets/730492/72f5c21f-5562-491e-aa42-2885a3184650)
+---
 
-- Dê um fork neste projeto e reescreva este `README.md`. Sinta-se à vontade para detalhar todo o processo de criação do seu Modelo de ML para uma "Previsão de Estoque Inteligente".
-- Para isso, siga o [passo a passo] descrito a seguir e evolua as suas habilidades em ML no-code com o Amazon SageMaker Canvas.
-- Ao concluir, envie a URL do seu repositório com a solução na plataforma da DIO.
+# 📁 Datasets Utilizados
 
+A pasta `datasets/` contém quatro arquivos utilizados nos experimentos, simulando diferentes cenários de estoque e demanda:
 
-## 🚀 Passo a Passo
+- **dataset-500-curso-sagemaker-canvas-dio.csv**  
+- **dataset-1000-com-preco-promocional-e-renovacao.csv**  
+- **dataset-1000-com-preco-variavel-e-renovacao.csv**  
+- **estoque_supermercado.csv** *(dataset principal usado no projeto)*
 
-### 1. Selecionar Dataset
+Esses datasets permitem comparar modelos e testar variações com promoções, renovação de estoque e flutuação de preço.
 
--   Navegue até a pasta `datasets` deste repositório. Esta pasta contém os datasets que você poderá escolher para treinar e testar seu modelo de ML. Sinta-se à vontade para gerar/enriquecer seus próprios datasets, quanto mais você se engajar, mais relevante esse projeto será em seu portfólio.
--   Escolha o dataset que você usará para treinar seu modelo de previsão de estoque.
--   Faça o upload do dataset no SageMaker Canvas.
+---
 
-### 2. Construir/Treinar
+# ⚙️ Fluxo Completo no SageMaker Canvas
 
--   No SageMaker Canvas, importe o dataset que você selecionou.
--   Configure as variáveis de entrada e saída de acordo com os dados.
--   Inicie o treinamento do modelo. Isso pode levar algum tempo, dependendo do tamanho do dataset.
+## **1️⃣ Selecionar Dataset**
+- Upload via interface  
+- Validação das colunas  
+- Tratamento de dados básicos  
 
-### 3. Analisar
+📸 *Evidência:*  
+`docs/evidencias/01-upload-dataset.png`
 
--   Após o treinamento, examine as métricas de performance do modelo.
--   Verifique as principais características que influenciam as previsões.
--   Faça ajustes no modelo se necessário e re-treine até obter um desempenho satisfatório.
+---
 
-### 4. Prever
+## **2️⃣ Construir e Treinar o Modelo**
+- Definição da variável alvo  
+- Ajuste das variáveis de entrada  
+- Treinamento automático  
 
--   Use o modelo treinado para fazer previsões de estoque.
--   Exporte os resultados e analise as previsões geradas.
--   Documente suas conclusões e qualquer insight obtido a partir das previsões.
+📸 *Evidências:*  
+`docs/evidencias/02-config-modelo.png`  
+`docs/evidencias/03-treinamento.png`
 
-## 🤔 Dúvidas?
+---
 
-Esperamos que esta experiência tenha sido enriquecedora e que você tenha aprendido mais sobre Machine Learning aplicado a problemas reais. Se tiver alguma dúvida, não hesite em abrir uma issue neste repositório ou entrar em contato com a equipe da DIO.
+## **3️⃣ Analisar Métricas**
+- R²  
+- Erros (MAE/MSE)  
+- Feature Importance  
+
+📸 *Evidência:*  
+`docs/evidencias/04-metricas.png`
+
+---
+
+## **4️⃣ Gerar Previsões**
+- Inserção de novos dados  
+- Exportação do CSV  
+- Leitura dos resultados  
+
+📸 *Evidência:*  
+`docs/evidencias/05-previsoes.png`
+
+---
+
+# 📈 Insights Gerados
+
+- Identificação de produtos com risco de ruptura  
+- Detecção de excesso de estoque  
+- Relação direta entre preço/promos e demanda  
+- Diferença de comportamento por categoria  
+
+---
+
+# 🧠 Aprendizados do Projeto
+
+- ML no-code acelera o entendimento de processos de IA  
+- Canvas fornece resultados claros para tomada de decisão  
+- Usar múltiplos datasets ajuda a comparar cenários  
+- Visualizar métricas facilita interpretação  
+
+---
+
+# 🚀 Como Executar o Projeto
+
+1. Clone este repositório:
+```bash
+git clone https://github.com/cmosantos/lab-aws-sagemaker-canvas-estoque
+cd lab-aws-sagemaker-canvas-estoque
+
